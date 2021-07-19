@@ -1,0 +1,14 @@
+<ul className='lists'>
+       {user.results.map(({id,title,poster_path,vote_average,overview})=> {
+        return (
+           <li key={id}className='list'>
+              <img src={poster_path} alt={title}/>
+              <h4 className='title'>{title}</h4>
+              <p className='overview'>{overview}</p>
+              <div className='rate'>
+              <p className='vote'>{vote_average}</p>
+              </div>
+           </li>
+         )
+       })}    
+    </ul>
